@@ -3,6 +3,13 @@ const express = require('express');
 
 const app = express();
 
+const helloWorld = function () {
+  console.log('Hello World');
+}
+
+//fancy stuff
+app.use(helloWorld)
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(function (req, res, next) {
